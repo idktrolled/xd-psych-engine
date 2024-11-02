@@ -22,8 +22,8 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          haxelib install hmm
-          haxelib run hmm install
+          chmod +x ./setup/unix.sh
+          sh ./setup/unix.sh
       - name: Skip SScript setup mode
         run: haxelib git SScript https://github.com/idktrolled/SScript
       - name: Setup Android
